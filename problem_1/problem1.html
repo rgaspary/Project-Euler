@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Problem 1</title>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			var i;
+			var total = 0;
+			for (i=0; i<1000; i++){
+				if (i % 3 === 0 || i % 5 === 0 ) {
+					total = i + total;
+				}
+			}
+			$('#answer').append("The sum of all the multiples of 3 or 5 below 1000 is " + total);
+		});
+	</script>
+</head>
+<body>
+	<h1 id="answer"></h1>
+</body>
+</html>
