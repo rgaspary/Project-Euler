@@ -17,18 +17,33 @@
 <script>
 	var pal;
 	var total;
+	var largest_pre = 0;
 	for (var a = 100; a < 1000; a++) {
 		for (var b = 100; b < 1000; b++) {
 			pal = a * b;
+		
 			if (isPal(pal)) {
-				total = a * b;
+				if (pal > largest_pre) {
+					largest_pre = pal;
+					total = a * b;
+				}
 			}
 		}
 	}
 
 	function isPal(pal) {
-		var rev = 0;
+		var rev;
 		//Need to reverse the integer and see if its a palindrome number.
+		rev = new String(pal);
+		rev = rev.split("").reverse().join("");
+		rev = parseInt(rev);
+		if (pal === rev) {
+			return true;
+		} else {
+			return false;
+		}
 	}
+
+	document.getElementById('output').innerHTML = '<p>The largest palindrome made from the product of two 3-digit numbers is:<br><span>' + total + '</span></p>';
 </script>
 </html>
