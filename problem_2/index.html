@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project Euler - Problem 2</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Even Fibonacci Numbers</h1>
+	<div id="input">
+		
+	</div>
+	<div id="output">
+		
+	</div>
+</body>
+<script>
+	var fibb = [0, 1];
+	var number_hold = 0;
+	var even_fibb = [];
+	var even_add = 0;
+	var output = '<p>';
+	for (var i = 1; number_hold <= 4e6; i++) {
+		number_hold = fibb[i]+fibb[i-1];
+		fibb.push(number_hold);	
+		if (number_hold % 2 === 0) {
+			even_fibb.push(number_hold);
+			console.log(number_hold);
+		}
+	}
+	for (var n = 0; n <= even_fibb.length-1; n++) {
+		if (even_fibb[n] < 4e6) {
+			if (n == even_fibb.length-1){
+				output += parseInt(even_fibb[n]);
+				even_add += even_fibb[n];
+			} else {
+				output += parseInt(even_fibb[n]) + ', ';
+				even_add += even_fibb[n];
+			}
+		}
+	}
+	output += '</p>';
+	document.getElementById('output').innerHTML = output + '<p><strong>The sum of all even Fibbonacci numbers under 4 million is:</strong><br><span>' + even_add + '</span></p>';
+</script>
+</html>
