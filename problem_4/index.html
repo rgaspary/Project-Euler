@@ -15,6 +15,20 @@
 	</div>
 </body>
 <script>
-	
+	var pal;
+	var total;
+	for (var a = 100; a < 1000; a++) {
+		for (var b = 100; b < 1000; b++) {
+			pal = a * b;
+			if (isPal(pal)) {
+				total = a * b;
+			}
+		}
+	}
+
+	function isPal(pal) {
+		var rev = 0;
+		//Need to reverse the integer and see if its a palindrome number.
+	}
 </script>
 </html>
