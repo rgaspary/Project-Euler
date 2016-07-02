@@ -6,16 +6,6 @@
     </head>
     <body>
         <h1 id="answer"></h1>
-        <script type="text/javascript" charset="utf-8">
-            (function () {
-                var total = 0;
-                for (var i=0; i<1000; i++){
-                    if (i % 3 === 0 || i % 5 === 0 ) {
-                        total = i + total;
-                    }
-                }
-                $('#answer').append("The sum of all the multiples of 3 or 5 below 1000 is " + total);
-            })();
-        </script>
+        <script src="compiled/solution.js"></script>
     </body>
 </html>
