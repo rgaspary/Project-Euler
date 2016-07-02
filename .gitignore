@@ -1,11 +1,2 @@
-<<<<<<< HEAD
-
-problem_5/.idea/vcs.xml
-
-problem_5/.idea/workspace.xml
-
-problem_5/.idea/workspace.xml
-=======
 .idea
-.idea/
->>>>>>> 7be9e3769feb279da97dbf0dc327b53d7b12a061
+node_modules
