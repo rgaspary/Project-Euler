@@ -21,3 +21,19 @@
 // The LCM of 12, 15, and 25 is 300.
 
 // SOLUTION:
+const minNum = 1;
+const maxNum = 20;
+const primeFactors = [];
+
+let base = 2;
+let counter = minNum;
+while (counter <= maxNum) {
+  if (counter % base == 0) {
+    primeFactors.push(counter);
+    counter++;
+  } else {
+    counter++;
+  }
+}
+
+console.log(primeFactors);
